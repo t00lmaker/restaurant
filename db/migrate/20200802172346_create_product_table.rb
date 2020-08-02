@@ -4,6 +4,8 @@ class CreateProductTable < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.decimal :price
+
+      t.timestamps
     end
   end
 end

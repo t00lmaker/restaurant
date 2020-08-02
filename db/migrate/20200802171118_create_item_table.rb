@@ -1,10 +1,12 @@
 class CreateItemTable < ActiveRecord::Migration[6.0]
   def change
     create_table :items do |t|
-      t.reference :product
-      t.reference :order
+      t.belongs_to :product
+      t.belongs_to :order
       t.decimal :discount
       t.decimal :price
+
+      t.timestamps
     end
   end
 end
