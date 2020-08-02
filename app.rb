@@ -1,11 +1,12 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require './models'
+require 'json'
 
-
-set :database, "sqlite3:restaurant.sqlite3"
-
+set :database_file, "./config/database.yml"
 
 get '/' do
-  'Hello world!'
+  content_type :json
+  User.all.to_json
 end
 
