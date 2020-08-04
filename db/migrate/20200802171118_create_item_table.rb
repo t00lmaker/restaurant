@@ -5,6 +5,7 @@ class CreateItemTable < ActiveRecord::Migration[6.0]
       t.belongs_to :order
       t.decimal :discount
       t.decimal :price
+      t.integer :quantity
 
       t.timestamps
     end
